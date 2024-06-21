@@ -30,4 +30,9 @@ echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
 echo "DONE."
 }
-_init
+_init_portal="xdg-desktop-portal"
+_DE=$(echo $XDG_CURRENT_DESKTOP|grep -o -e XFCE -e LXDE -e LXQT -e GNOME -e KDE)
+if [[ "$_DE" == "XFCE" || "LXDE" ]]; then $_doso $add $_portal-gtk; fi
+if [[ "$_DE" == "GNOME" ]]; then $_doso $add $_portal-gnome; fi
+if [[ "$_DE" == "LXQT" ]]; then $_doso $add $_portal-lxqt; fi
+if [[ "$_DE" == "KDE" ]]; then $_doso $add $_portal-kde; fi
