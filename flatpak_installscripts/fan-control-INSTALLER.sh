@@ -34,6 +34,9 @@ echo "Icon=/etc/fan-control-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR fan-control"
+echo "alias fan-control='flatpak run io.github.wiiznokes.fan-control'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

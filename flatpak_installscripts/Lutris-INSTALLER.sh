@@ -34,6 +34,9 @@ echo "Icon=/etc/Lutris-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Lutris"
+echo "alias Lutris='flatpak run net.lutris.Lutris'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

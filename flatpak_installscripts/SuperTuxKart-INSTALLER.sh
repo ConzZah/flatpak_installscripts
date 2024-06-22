@@ -34,6 +34,9 @@ echo "Icon=/etc/SuperTuxKart-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR SuperTuxKart"
+echo "alias SuperTuxKart='flatpak run net.supertuxkart.SuperTuxKart'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,6 +34,9 @@ echo "Icon=/etc/mGBA-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR mGBA"
+echo "alias mGBA='flatpak run io.mgba.mGBA'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

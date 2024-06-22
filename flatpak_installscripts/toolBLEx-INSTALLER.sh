@@ -34,6 +34,9 @@ echo "Icon=/etc/toolBLEx-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR toolBLEx"
+echo "alias toolBLEx='flatpak run io.emeric.toolblex'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

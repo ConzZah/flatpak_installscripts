@@ -34,6 +34,9 @@ echo "Icon=/etc/fooyin-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR fooyin"
+echo "alias fooyin='flatpak run org.fooyin.fooyin'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

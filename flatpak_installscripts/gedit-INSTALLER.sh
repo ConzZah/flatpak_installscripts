@@ -34,6 +34,9 @@ echo "Icon=/etc/gedit-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR gedit"
+echo "alias gedit='flatpak run org.gnome.gedit'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

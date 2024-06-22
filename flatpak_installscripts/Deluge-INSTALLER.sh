@@ -34,6 +34,9 @@ echo "Icon=/etc/Deluge-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Deluge"
+echo "alias Deluge='flatpak run org.deluge_torrent.deluge'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

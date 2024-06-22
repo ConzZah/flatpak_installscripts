@@ -34,6 +34,9 @@ echo "Icon=/etc/VICE-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR VICE"
+echo "alias VICE='flatpak run net.sf.VICE'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

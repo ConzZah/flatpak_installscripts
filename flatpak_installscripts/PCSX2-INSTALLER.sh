@@ -34,6 +34,9 @@ echo "Icon=/etc/PCSX2-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR PCSX2"
+echo "alias PCSX2='flatpak run net.pcsx2.PCSX2'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,6 +34,9 @@ echo "Icon=/etc/ProtonUp-Qt-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR ProtonUp-Qt"
+echo "alias ProtonUp-Qt='flatpak run net.davidotek.pupgui2'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

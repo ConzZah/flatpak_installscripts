@@ -34,6 +34,9 @@ echo "Icon=/etc/Steam_icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Steam"
+echo "alias Steam='flatpak run com.valvesoftware.Steam'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

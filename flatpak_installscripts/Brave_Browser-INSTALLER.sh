@@ -34,6 +34,9 @@ echo "Icon=/etc/Brave_Browser-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Brave_Browser"
+echo "alias Brave_Browser='flatpak run com.brave.Browser'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

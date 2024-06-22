@@ -34,6 +34,9 @@ echo "Icon=/etc/FileZilla-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR FileZilla"
+echo "alias FileZilla='flatpak run org.filezillaproject.Filezilla'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

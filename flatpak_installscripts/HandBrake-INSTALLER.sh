@@ -34,6 +34,9 @@ echo "Icon=/etc/HandBrake_icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR HandBrake"
+echo "alias HandBrake='flatpak run fr.handbrake.ghb'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

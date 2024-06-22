@@ -34,6 +34,9 @@ echo "Icon=/etc/Alpaca-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Alpaca"
+echo "alias Alpaca='flatpak run com.jeffser.Alpaca'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

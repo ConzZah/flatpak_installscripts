@@ -34,6 +34,9 @@ echo "Icon=/etc/Blender-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Blender"
+echo "alias Blender='flatpak run org.blender.Blender'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

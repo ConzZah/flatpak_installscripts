@@ -34,6 +34,9 @@ echo "Icon=/etc/AntiMicroX-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR AntiMicroX"
+echo "alias AntiMicroX='flatpak run io.github.antimicrox.antimicrox'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,6 +34,9 @@ echo "Icon=/etc/Popsicle-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Popsicle"
+echo "alias Popsicle='flatpak run com.system76.Popsicle'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

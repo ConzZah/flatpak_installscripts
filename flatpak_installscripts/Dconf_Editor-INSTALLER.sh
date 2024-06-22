@@ -34,6 +34,9 @@ echo "Icon=/etc/Dconf_Editor-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Dconf_Editor"
+echo "alias Dconf_Editor='flatpak run ca.desrt.dconf-editor'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

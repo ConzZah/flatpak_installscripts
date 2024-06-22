@@ -34,6 +34,9 @@ echo "Icon=/etc/Impression-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Impression"
+echo "alias Impression='flatpak run io.gitlab.adhami3310.Impression'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

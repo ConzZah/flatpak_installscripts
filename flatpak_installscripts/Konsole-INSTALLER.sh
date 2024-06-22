@@ -34,6 +34,9 @@ echo "Icon=/etc/Konsole-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Konsole"
+echo "alias Konsole='flatpak run org.kde.konsole'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,6 +34,9 @@ echo "Icon=/etc/VLC_icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR VLC"
+echo "alias VLC='flatpak run org.videolan.VLC'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

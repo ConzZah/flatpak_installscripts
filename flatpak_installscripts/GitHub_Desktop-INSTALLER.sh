@@ -34,6 +34,9 @@ echo "Icon=/etc/GitHub_Desktop-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR GitHub_Desktop"
+echo "alias GitHub_Desktop='flatpak run io.github.shiftey.Desktop'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

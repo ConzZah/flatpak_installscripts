@@ -34,6 +34,9 @@ echo "Icon=/etc/LibreOffice-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR LibreOffice"
+echo "alias LibreOffice='flatpak run org.libreoffice.LibreOffice'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -10,6 +10,12 @@ if [[ "$is_debian" == "Debian" ]]; then _os=$is_debian; add=$add_debian; y="-y";
 if [[ "$_os" == "" ]]; then add=$add_debian; _install; fi
 }
 function _install {
+_portal="xdg-desktop-portal"
+_DE=$(echo $XDG_CURRENT_DESKTOP|grep -o -e XFCE -e LXDE -e LXQT -e GNOME -e KDE)
+if [[ "$_DE" == "XFCE" || "LXDE" ]]; then $_doso $add $_portal-gtk; fi
+if [[ "$_DE" == "GNOME" ]]; then $_doso $add $_portal-gnome; fi
+if [[ "$_DE" == "LXQT" ]]; then $_doso $add $_portal-lxqt; fi
+if [[ "$_DE" == "KDE" ]]; then $_doso $add $_portal-kde; fi
 $_doso $add $y flatpak && $_doso flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 $_doso flatpak install -y flathub com.makemkv.MakeMKV
 cd /home/$USER/Desktop
@@ -28,11 +34,9 @@ echo "Icon=/etc/MakeMKV_icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR MakeMKV"
+echo "alias MakeMKV='flatpak run com.makemkv.MakeMKV'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
-_init_portal="xdg-desktop-portal"
-_DE=$(echo $XDG_CURRENT_DESKTOP|grep -o -e XFCE -e LXDE -e LXQT -e GNOME -e KDE)
-if [[ "$_DE" == "XFCE" || "LXDE" ]]; then $_doso $add $_portal-gtk; fi
-if [[ "$_DE" == "GNOME" ]]; then $_doso $add $_portal-gnome; fi
-if [[ "$_DE" == "LXQT" ]]; then $_doso $add $_portal-lxqt; fi
-if [[ "$_DE" == "KDE" ]]; then $_doso $add $_portal-kde; fi
+_init

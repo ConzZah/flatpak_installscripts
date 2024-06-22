@@ -34,6 +34,9 @@ echo "Icon=/etc/Cave_Story_NX-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Cave_Story_NX"
+echo "alias Cave_Story_NX='flatpak run com.gitlab.coringao.cavestory-nx'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,6 +34,9 @@ echo "Icon=/etc/RPCS3-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR RPCS3"
+echo "alias RPCS3='flatpak run net.rpcs3.RPCS3'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

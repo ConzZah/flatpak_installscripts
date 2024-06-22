@@ -34,6 +34,9 @@ echo "Icon=/etc/Clicker-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Clicker"
+echo "alias Clicker='flatpak run net.codelogistics.clicker'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,6 +34,9 @@ echo "Icon=/etc/Telegram_Desktop-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Telegram_Desktop"
+echo "alias Telegram_Desktop='flatpak run org.telegram.desktop'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

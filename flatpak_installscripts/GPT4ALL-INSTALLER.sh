@@ -34,6 +34,9 @@ echo "Icon=/etc/GPT4ALL-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR GPT4ALL"
+echo "alias GPT4ALL='flatpak run io.gpt4all.gpt4all'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,6 +34,9 @@ echo "Icon=/etc/Flycast-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Flycast"
+echo "alias Flycast='flatpak run org.flycast.Flycast'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

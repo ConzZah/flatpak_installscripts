@@ -34,6 +34,9 @@ echo "Icon=/etc/PuTTY-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR PuTTY"
+echo "alias PuTTY='flatpak run uk.org.greenend.chiark.sgtatham.putty'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

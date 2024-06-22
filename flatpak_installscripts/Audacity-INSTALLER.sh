@@ -34,6 +34,9 @@ echo "Icon=/etc/Audacity_icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Audacity"
+echo "alias Audacity='flatpak run org.audacityteam.Audacity'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,6 +34,9 @@ echo "Icon=/etc/Snes9x-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Snes9x"
+echo "alias Snes9x='flatpak run com.snes9x.Snes9x'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

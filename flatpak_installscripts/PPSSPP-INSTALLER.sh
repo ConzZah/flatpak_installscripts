@@ -34,6 +34,9 @@ echo "Icon=/etc/PPSSPP-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR PPSSPP"
+echo "alias PPSSPP='flatpak run org.ppsspp.PPSSPP'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,6 +34,9 @@ echo "Icon=/etc/ISO-Image-Writer-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR ISO-Image-Writer"
+echo "alias ISO-Image-Writer='flatpak run org.kde.isoimagewriter'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init

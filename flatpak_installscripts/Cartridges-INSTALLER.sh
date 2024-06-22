@@ -34,6 +34,9 @@ echo "Icon=/etc/Cartridges-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
+echo ""; echo "CREATING SYMLINK FOR Cartridges"
+echo "alias Cartridges='flatpak run page.kramo.Cartridges'" >> ~/.bash_aliases
+source ~/.bash_aliases
 echo "DONE."
 }
 _init
