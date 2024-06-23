@@ -34,9 +34,8 @@ echo "Icon=/etc/ScummVM-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR ScummVM"
+echo "CREATING ALIAS FOR ScummVM"
 echo "alias ScummVM='flatpak run org.scummvm.ScummVM'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

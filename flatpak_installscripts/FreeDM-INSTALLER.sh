@@ -34,9 +34,8 @@ echo "Icon=/etc/FreeDM-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR FreeDM"
+echo "CREATING ALIAS FOR FreeDM"
 echo "alias FreeDM='flatpak run io.github.freedoom.FreeDM'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

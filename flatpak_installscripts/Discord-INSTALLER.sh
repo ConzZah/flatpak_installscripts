@@ -34,9 +34,8 @@ echo "Icon=/etc/Discord-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Discord"
+echo "CREATING ALIAS FOR Discord"
 echo "alias Discord='flatpak run com.discordapp.Discord'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

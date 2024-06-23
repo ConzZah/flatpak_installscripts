@@ -34,9 +34,8 @@ echo "Icon=/etc/Basilisk_II-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Basilisk_II"
+echo "CREATING ALIAS FOR Basilisk_II"
 echo "alias Basilisk_II='flatpak run net.cebix.basilisk'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

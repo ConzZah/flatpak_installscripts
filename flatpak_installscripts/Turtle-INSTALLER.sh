@@ -34,9 +34,8 @@ echo "Icon=/etc/Turtle-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Turtle"
+echo "CREATING ALIAS FOR Turtle"
 echo "alias Turtle='flatpak run de.philippun1.turtle'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

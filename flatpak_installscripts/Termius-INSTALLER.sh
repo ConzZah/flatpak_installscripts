@@ -34,9 +34,8 @@ echo "Icon=/etc/Termius-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Termius"
+echo "CREATING ALIAS FOR Termius"
 echo "alias Termius='flatpak run com.termius.Termius'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,9 +34,8 @@ echo "Icon=/etc/Lime3DS-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Lime3DS"
+echo "CREATING ALIAS FOR Lime3DS"
 echo "alias Lime3DS='flatpak run io.github.lime3ds.Lime3DS'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

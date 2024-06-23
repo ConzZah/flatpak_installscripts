@@ -34,9 +34,8 @@ echo "Icon=/etc/Organic_Maps-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Organic_Maps"
+echo "CREATING ALIAS FOR Organic_Maps"
 echo "alias Organic_Maps='flatpak run app.organicmaps.desktop'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

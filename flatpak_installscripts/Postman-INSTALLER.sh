@@ -34,9 +34,8 @@ echo "Icon=/etc/Postman-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Postman"
+echo "CREATING ALIAS FOR Postman"
 echo "alias Postman='flatpak run com.getpostman.Postman'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

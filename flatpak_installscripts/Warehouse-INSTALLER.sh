@@ -34,9 +34,8 @@ echo "Icon=/etc/Warehouse-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Warehouse"
+echo "CREATING ALIAS FOR Warehouse"
 echo "alias Warehouse='flatpak run io.github.flattool.Warehouse'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

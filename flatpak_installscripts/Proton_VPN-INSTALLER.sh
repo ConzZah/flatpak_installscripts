@@ -34,9 +34,8 @@ echo "Icon=/etc/Proton_VPN-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Proton_VPN"
+echo "CREATING ALIAS FOR Proton_VPN"
 echo "alias Proton_VPN='flatpak run com.protonvpn.www'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

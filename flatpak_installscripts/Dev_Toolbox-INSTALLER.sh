@@ -34,9 +34,8 @@ echo "Icon=/etc/Dev_Toolbox-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Dev_Toolbox"
+echo "CREATING ALIAS FOR Dev_Toolbox"
 echo "alias Dev_Toolbox='flatpak run me.iepure.devtoolbox'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

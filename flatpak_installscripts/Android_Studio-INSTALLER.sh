@@ -34,9 +34,8 @@ echo "Icon=/etc/Android_Studio-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Android_Studio"
+echo "CREATING ALIAS FOR Android_Studio"
 echo "alias Android_Studio='flatpak run com.google.AndroidStudio'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

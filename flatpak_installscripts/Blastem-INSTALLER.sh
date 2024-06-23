@@ -34,9 +34,8 @@ echo "Icon=/etc/Blastem-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Blastem"
+echo "CREATING ALIAS FOR Blastem"
 echo "alias Blastem='flatpak run com.retrodev.blastem'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

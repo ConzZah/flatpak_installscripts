@@ -34,9 +34,8 @@ echo "Icon=/etc/GZDoom-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR GZDoom"
+echo "CREATING ALIAS FOR GZDoom"
 echo "alias GZDoom='flatpak run org.zdoom.GZDoom'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

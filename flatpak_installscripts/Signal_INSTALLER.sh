@@ -34,9 +34,8 @@ echo "Icon=/etc/Signal_icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Signal"
+echo "CREATING ALIAS FOR Signal"
 echo "alias Signal='flatpak run org.signal.Signal'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

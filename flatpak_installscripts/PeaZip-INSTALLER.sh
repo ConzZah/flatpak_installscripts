@@ -34,9 +34,8 @@ echo "Icon=/etc/PeaZip-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR PeaZip"
+echo "CREATING ALIAS FOR PeaZip"
 echo "alias PeaZip='flatpak run io.github.peazip.PeaZip'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

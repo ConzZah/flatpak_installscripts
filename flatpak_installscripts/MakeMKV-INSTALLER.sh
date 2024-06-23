@@ -34,9 +34,8 @@ echo "Icon=/etc/MakeMKV_icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR MakeMKV"
+echo "CREATING ALIAS FOR MakeMKV"
 echo "alias MakeMKV='flatpak run com.makemkv.MakeMKV'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

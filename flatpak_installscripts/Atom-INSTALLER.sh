@@ -34,9 +34,8 @@ echo "Icon=/etc/Atom-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Atom"
+echo "CREATING ALIAS FOR Atom"
 echo "alias Atom='flatpak run io.atom.Atom'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

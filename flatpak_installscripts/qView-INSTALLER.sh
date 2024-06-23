@@ -34,9 +34,8 @@ echo "Icon=/etc/qView-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR qView"
+echo "CREATING ALIAS FOR qView"
 echo "alias qView='flatpak run com.interversehq.qView'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

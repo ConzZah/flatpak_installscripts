@@ -34,9 +34,8 @@ echo "Icon=/etc/CrispyDoom-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR CrispyDoom"
+echo "CREATING ALIAS FOR CrispyDoom"
 echo "alias CrispyDoom='flatpak run io.github.fabiangreffrath.Doom'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

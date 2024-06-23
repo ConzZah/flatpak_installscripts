@@ -34,9 +34,8 @@ echo "Icon=/etc/GPU-Viewer-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR GPU-Viewer"
+echo "CREATING ALIAS FOR GPU-Viewer"
 echo "alias GPU-Viewer='flatpak run io.github.arunsivaramanneo.GPUViewer'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

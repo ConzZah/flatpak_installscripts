@@ -34,9 +34,8 @@ echo "Icon=/etc/ncspot-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR ncspot"
+echo "CREATING ALIAS FOR ncspot"
 echo "alias ncspot='flatpak run io.github.hrkfdn.ncspot'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

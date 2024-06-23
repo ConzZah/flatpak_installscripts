@@ -34,9 +34,8 @@ echo "Icon=/etc/Zoom-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Zoom"
+echo "CREATING ALIAS FOR Zoom"
 echo "alias Zoom='flatpak run us.zoom.Zoom'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

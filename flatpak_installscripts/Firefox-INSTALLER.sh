@@ -34,9 +34,8 @@ echo "Icon=/etc/Firefox-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Firefox"
+echo "CREATING ALIAS FOR Firefox"
 echo "alias Firefox='flatpak run org.mozilla.firefox'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

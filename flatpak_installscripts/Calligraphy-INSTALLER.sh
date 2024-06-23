@@ -34,9 +34,8 @@ echo "Icon=/etc/Calligraphy-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Calligraphy"
+echo "CREATING ALIAS FOR Calligraphy"
 echo "alias Calligraphy='flatpak run dev.geopjr.Calligraphy'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

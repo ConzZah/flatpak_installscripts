@@ -34,9 +34,8 @@ echo "Icon=/etc/GB_Studio-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR GB_Studio"
+echo "CREATING ALIAS FOR GB_Studio"
 echo "alias GB_Studio='flatpak run dev.gbstudio.gb-studio'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

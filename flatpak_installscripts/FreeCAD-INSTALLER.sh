@@ -34,9 +34,8 @@ echo "Icon=/etc/FreeCAD-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR FreeCAD"
+echo "CREATING ALIAS FOR FreeCAD"
 echo "alias FreeCAD='flatpak run org.freecadweb.FreeCAD'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

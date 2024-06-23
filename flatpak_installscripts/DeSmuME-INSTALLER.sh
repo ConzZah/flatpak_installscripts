@@ -34,9 +34,8 @@ echo "Icon=/etc/DeSmuME-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR DeSmuME"
+echo "CREATING ALIAS FOR DeSmuME"
 echo "alias DeSmuME='flatpak run org.desmume.DeSmuME'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

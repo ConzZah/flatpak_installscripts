@@ -34,9 +34,8 @@ echo "Icon=/etc/RuneLite-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR RuneLite"
+echo "CREATING ALIAS FOR RuneLite"
 echo "alias RuneLite='flatpak run net.runelite.RuneLite'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

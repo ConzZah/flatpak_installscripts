@@ -34,9 +34,8 @@ echo "Icon=/etc/Nestopia-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Nestopia"
+echo "CREATING ALIAS FOR Nestopia"
 echo "alias Nestopia='flatpak run ca._0ldsk00l.Nestopia'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

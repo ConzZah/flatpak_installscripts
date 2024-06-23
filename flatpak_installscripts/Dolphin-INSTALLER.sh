@@ -17,10 +17,10 @@ if [[ "$_DE" == "GNOME" ]]; then $_doso $add $_portal-gnome; fi
 if [[ "$_DE" == "LXQT" ]]; then $_doso $add $_portal-lxqt; fi
 if [[ "$_DE" == "KDE" ]]; then $_doso $add $_portal-kde; fi
 $_doso $add $y flatpak && $_doso flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-$_doso flatpak install -y flathub org.DolphinEmu.dolphin-emu
+$_doso flatpak install -y flathub org.kde.dolphin
 cd /home/$USER/Desktop
 echo ""; echo "CREATING DESKTOP SHORTCUT..."
-wget -q -O Dolphin-icon.png https://dl.flathub.org/media/org/dolphinemu/dolphin-emu/575827029bd1eced6d5e66a34b810c26/icons/128x128/org.DolphinEmu.dolphin-emu.png
+wget -q -O Dolphin-icon.png https://dl.flathub.org/media/org/kde/dolphin.desktop/84382a4c0fde67db325655f583f4cfa8/icons/128x128/org.kde.dolphin.desktop.png
 $_doso mv Dolphin-icon.png /etc/
 _sc="Dolphin.desktop"
 cd /home/$USER/Desktop
@@ -29,14 +29,13 @@ echo "Version=1.0">>$_sc
 echo "Type=Application">>$_sc
 echo "Name=Dolphin">>$_sc
 echo "Comment=Dolphin">>$_sc
-echo "Exec=flatpak run org.DolphinEmu.dolphin-emu">>$_sc
+echo "Exec=flatpak run org.kde.dolphin">>$_sc
 echo "Icon=/etc/Dolphin-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Dolphin"
-echo "alias Dolphin='flatpak run org.DolphinEmu.dolphin-emu'" >> ~/.bash_aliases
-source ~/.bash_aliases
+echo "CREATING ALIAS FOR Dolphin"
+echo "alias Dolphin='flatpak run org.kde.dolphin'" >> ~/.bash_aliases
 echo "DONE."
 }
 _init

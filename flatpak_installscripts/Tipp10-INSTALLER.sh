@@ -34,9 +34,8 @@ echo "Icon=/etc/Tipp10-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Tipp10"
+echo "CREATING ALIAS FOR Tipp10"
 echo "alias Tipp10='flatpak run apps/com.gitlab.tipp10.tipp10'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

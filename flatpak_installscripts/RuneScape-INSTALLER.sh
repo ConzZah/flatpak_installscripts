@@ -34,9 +34,8 @@ echo "Icon=/etc/RuneScape-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR RuneScape"
+echo "CREATING ALIAS FOR RuneScape"
 echo "alias RuneScape='flatpak run com.jagex.RuneScape'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

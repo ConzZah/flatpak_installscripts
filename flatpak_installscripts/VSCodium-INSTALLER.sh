@@ -34,9 +34,8 @@ echo "Icon=/etc/VSCodium-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR VSCodium"
+echo "CREATING ALIAS FOR VSCodium"
 echo "alias VSCodium='flatpak run com.vscodium.codium'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

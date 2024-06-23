@@ -34,9 +34,8 @@ echo "Icon=/etc/Protontricks-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Protontricks"
+echo "CREATING ALIAS FOR Protontricks"
 echo "alias Protontricks='flatpak run com.github.Matoking.protontricks'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

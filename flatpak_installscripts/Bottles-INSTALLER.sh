@@ -34,9 +34,8 @@ echo "Icon=/etc/Bottles-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Bottles"
+echo "CREATING ALIAS FOR Bottles"
 echo "alias Bottles='flatpak run com.usebottles.bottles'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,9 +34,8 @@ echo "Icon=/etc/Code::Blocks-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Code::Blocks"
+echo "CREATING ALIAS FOR Code::Blocks"
 echo "alias Code::Blocks='flatpak run org.codeblocks.codeblocks'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

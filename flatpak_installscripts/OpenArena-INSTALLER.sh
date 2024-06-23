@@ -34,9 +34,8 @@ echo "Icon=/etc/OpenArena-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR OpenArena"
+echo "CREATING ALIAS FOR OpenArena"
 echo "alias OpenArena='flatpak run io.github.ec_.Quake3e.OpenArena'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

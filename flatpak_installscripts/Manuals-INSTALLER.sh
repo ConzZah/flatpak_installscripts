@@ -34,9 +34,8 @@ echo "Icon=/etc/Manuals-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Manuals"
+echo "CREATING ALIAS FOR Manuals"
 echo "alias Manuals='flatpak run app.devsuite.Manuals'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

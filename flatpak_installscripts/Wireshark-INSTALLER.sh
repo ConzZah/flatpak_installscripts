@@ -34,9 +34,8 @@ echo "Icon=/etc/Wireshark-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Wireshark"
+echo "CREATING ALIAS FOR Wireshark"
 echo "alias Wireshark='flatpak run org.wireshark.Wireshark'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

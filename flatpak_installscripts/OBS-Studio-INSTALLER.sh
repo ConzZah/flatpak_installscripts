@@ -34,9 +34,8 @@ echo "Icon=/etc/OBS-Studio_icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR OBS-Studio"
+echo "CREATING ALIAS FOR OBS-Studio"
 echo "alias OBS-Studio='flatpak run com.obsproject.Studio'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

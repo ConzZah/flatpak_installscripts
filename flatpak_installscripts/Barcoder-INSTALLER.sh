@@ -34,9 +34,8 @@ echo "Icon=/etc/Barcoder-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Barcoder"
+echo "CREATING ALIAS FOR Barcoder"
 echo "alias Barcoder='flatpak run cz.ondrejkolin.Barcoder'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

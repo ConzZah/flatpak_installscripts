@@ -34,9 +34,8 @@ echo "Icon=/etc/DOSBox-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR DOSBox"
+echo "CREATING ALIAS FOR DOSBox"
 echo "alias DOSBox='flatpak run com.dosbox.DOSBox'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

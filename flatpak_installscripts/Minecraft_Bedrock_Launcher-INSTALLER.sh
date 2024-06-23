@@ -34,9 +34,8 @@ echo "Icon=/etc/Minecraft_Bedrock_Launcher-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Minecraft_Bedrock_Launcher"
+echo "CREATING ALIAS FOR Minecraft_Bedrock_Launcher"
 echo "alias Minecraft_Bedrock_Launcher='flatpak run io.mrarm.mcpelauncher'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,9 +34,8 @@ echo "Icon=/etc/SameBoy-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR SameBoy"
+echo "CREATING ALIAS FOR SameBoy"
 echo "alias SameBoy='flatpak run io.github.sameboy.SameBoy'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

@@ -34,9 +34,8 @@ echo "Icon=/etc/Arduino_IDE_v2-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Arduino_IDE_v2"
+echo "CREATING ALIAS FOR Arduino_IDE_v2"
 echo "alias Arduino_IDE_v2='flatpak run cc.arduino.IDE2'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

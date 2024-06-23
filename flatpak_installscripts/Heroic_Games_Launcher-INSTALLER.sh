@@ -34,9 +34,8 @@ echo "Icon=/etc/Heroic_Games_Launcher-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR Heroic_Games_Launcher"
+echo "CREATING ALIAS FOR Heroic_Games_Launcher"
 echo "alias Heroic_Games_Launcher='flatpak run com.heroicgameslauncher.hgl'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

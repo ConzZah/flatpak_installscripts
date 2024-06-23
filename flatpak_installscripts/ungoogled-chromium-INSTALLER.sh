@@ -34,9 +34,8 @@ echo "Icon=/etc/ungoogled-chromium-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR ungoogled-chromium"
+echo "CREATING ALIAS FOR ungoogled-chromium"
 echo "alias ungoogled-chromium='flatpak run io.github.ungoogled_software.ungoogled_chromium'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init

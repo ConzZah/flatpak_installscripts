@@ -34,9 +34,8 @@ echo "Icon=/etc/xemu-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo ""; echo "CREATING SYMLINK FOR xemu"
+echo "CREATING ALIAS FOR xemu"
 echo "alias xemu='flatpak run app.xemu.xemu'" >> ~/.bash_aliases
-source ~/.bash_aliases
 echo "DONE."
 }
 _init
