@@ -17,30 +17,30 @@ if [[ "$_DE" == "GNOME" ]]; then $_doso $add $_portal-gnome; fi
 if [[ "$_DE" == "LXQT" ]]; then $_doso $add $_portal-lxqt; fi
 if [[ "$_DE" == "KDE" ]]; then $_doso $add $_portal-kde; fi
 $_doso $add $y flatpak && $_doso flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-$_doso flatpak install -y flathub us.zoom.Zoom
+$_doso flatpak install -y flathub org.raspberrypi.rpi-imager
 cd /home/$USER/Desktop
 echo ""; echo "CREATING DESKTOP SHORTCUT..."
-wget -q -O Zoom-icon.png https://dl.flathub.org/media/us/zoom/Zoom.desktop/790593af2caca24a004cf72bfea2e2f3/icons/128x128/us.zoom.Zoom.desktop.png
-$_doso mv Zoom-icon.png /etc/
-_sc="Zoom.desktop"
+wget -q -O Raspberry_Pi_Imager-icon.png https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/org.raspberrypi.rpi-imager.png
+$_doso mv Raspberry_Pi_Imager-icon.png /etc/
+_sc="Raspberry_Pi_Imager.desktop"
 cd /home/$USER/Desktop
 echo "[Desktop Entry]">$_sc
 echo "Version=1.0">>$_sc
 echo "Type=Application">>$_sc
-echo "Name=Zoom">>$_sc
-echo "Comment=Zoom">>$_sc
-echo "Exec=flatpak run us.zoom.Zoom">>$_sc
-echo "Icon=/etc/Zoom-icon.png">>$_sc
+echo "Name=Raspberry_Pi_Imager">>$_sc
+echo "Comment=Raspberry_Pi_Imager">>$_sc
+echo "Exec=flatpak run org.raspberrypi.rpi-imager">>$_sc
+echo "Icon=/etc/Raspberry_Pi_Imager-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
-echo "CREATING ALIAS FOR Zoom"
+echo "CREATING ALIAS FOR Raspberry_Pi_Imager"
 [ ! -f ~/.bashrc ] && touch ~/.bashrc
 _bash_aliases="[ -f ~/.bash_aliases ] && . ~/.bash_aliases"
 autoload_=$(cat ~/.bashrc|grep "$_bash_aliases")
-aliascheck_=$(cat ~/.bash_aliases|grep -o -m 1 Zoom|head -1)
+aliascheck_=$(cat ~/.bash_aliases|grep -o -m 1 Raspberry_Pi_Imager|head -1)
 [ -z "$autoload_" ] && echo "$_bash_aliases" >> ~/.bashrc
-[ -z "$aliascheck_" ] && echo "alias Zoom='flatpak run us.zoom.Zoom'" >> ~/.bash_aliases 
+[ -z "$aliascheck_" ] && echo "alias Raspberry_Pi_Imager='flatpak run org.raspberrypi.rpi-imager'" >> ~/.bash_aliases 
 echo "DONE."
 }
 _init

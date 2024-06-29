@@ -35,7 +35,12 @@ echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
 echo "CREATING ALIAS FOR FileZilla"
-echo "alias FileZilla='flatpak run org.filezillaproject.Filezilla'" >> ~/.bash_aliases
+[ ! -f ~/.bashrc ] && touch ~/.bashrc
+_bash_aliases="[ -f ~/.bash_aliases ] && . ~/.bash_aliases"
+autoload_=$(cat ~/.bashrc|grep "$_bash_aliases")
+aliascheck_=$(cat ~/.bash_aliases|grep -o -m 1 FileZilla|head -1)
+[ -z "$autoload_" ] && echo "$_bash_aliases" >> ~/.bashrc
+[ -z "$aliascheck_" ] && echo "alias FileZilla='flatpak run org.filezillaproject.Filezilla'" >> ~/.bash_aliases 
 echo "DONE."
 }
 _init

@@ -35,7 +35,12 @@ echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
 echo "CREATING ALIAS FOR ungoogled-chromium"
-echo "alias ungoogled-chromium='flatpak run io.github.ungoogled_software.ungoogled_chromium'" >> ~/.bash_aliases
+[ ! -f ~/.bashrc ] && touch ~/.bashrc
+_bash_aliases="[ -f ~/.bash_aliases ] && . ~/.bash_aliases"
+autoload_=$(cat ~/.bashrc|grep "$_bash_aliases")
+aliascheck_=$(cat ~/.bash_aliases|grep -o -m 1 ungoogled-chromium|head -1)
+[ -z "$autoload_" ] && echo "$_bash_aliases" >> ~/.bashrc
+[ -z "$aliascheck_" ] && echo "alias ungoogled-chromium='flatpak run io.github.ungoogled_software.ungoogled_chromium'" >> ~/.bash_aliases 
 echo "DONE."
 }
 _init

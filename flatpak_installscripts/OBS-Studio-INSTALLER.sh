@@ -35,7 +35,12 @@ echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
 echo "CREATING ALIAS FOR OBS-Studio"
-echo "alias OBS-Studio='flatpak run com.obsproject.Studio'" >> ~/.bash_aliases
+[ ! -f ~/.bashrc ] && touch ~/.bashrc
+_bash_aliases="[ -f ~/.bash_aliases ] && . ~/.bash_aliases"
+autoload_=$(cat ~/.bashrc|grep "$_bash_aliases")
+aliascheck_=$(cat ~/.bash_aliases|grep -o -m 1 OBS-Studio|head -1)
+[ -z "$autoload_" ] && echo "$_bash_aliases" >> ~/.bashrc
+[ -z "$aliascheck_" ] && echo "alias OBS-Studio='flatpak run com.obsproject.Studio'" >> ~/.bash_aliases 
 echo "DONE."
 }
 _init

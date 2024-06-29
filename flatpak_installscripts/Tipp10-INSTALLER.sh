@@ -29,13 +29,18 @@ echo "Version=1.0">>$_sc
 echo "Type=Application">>$_sc
 echo "Name=Tipp10">>$_sc
 echo "Comment=Tipp10">>$_sc
-echo "Exec=flatpak run apps/com.gitlab.tipp10.tipp10">>$_sc
+echo "Exec=flatpak run com.gitlab.tipp10.tipp10">>$_sc
 echo "Icon=/etc/Tipp10-icon.png">>$_sc
 echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
 echo "CREATING ALIAS FOR Tipp10"
-echo "alias Tipp10='flatpak run apps/com.gitlab.tipp10.tipp10'" >> ~/.bash_aliases
+[ ! -f ~/.bashrc ] && touch ~/.bashrc
+_bash_aliases="[ -f ~/.bash_aliases ] && . ~/.bash_aliases"
+autoload_=$(cat ~/.bashrc|grep "$_bash_aliases")
+aliascheck_=$(cat ~/.bash_aliases|grep -o -m 1 Tipp10|head -1)
+[ -z "$autoload_" ] && echo "$_bash_aliases" >> ~/.bashrc
+[ -z "$aliascheck_" ] && echo "alias Tipp10='flatpak run apps/com.gitlab.tipp10.tipp10'" >> ~/.bash_aliases 
 echo "DONE."
 }
 _init

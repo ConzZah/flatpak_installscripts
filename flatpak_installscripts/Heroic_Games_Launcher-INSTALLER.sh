@@ -35,7 +35,12 @@ echo "Path=">>$_sc
 echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
 echo "CREATING ALIAS FOR Heroic_Games_Launcher"
-echo "alias Heroic_Games_Launcher='flatpak run com.heroicgameslauncher.hgl'" >> ~/.bash_aliases
+[ ! -f ~/.bashrc ] && touch ~/.bashrc
+_bash_aliases="[ -f ~/.bash_aliases ] && . ~/.bash_aliases"
+autoload_=$(cat ~/.bashrc|grep "$_bash_aliases")
+aliascheck_=$(cat ~/.bash_aliases|grep -o -m 1 Heroic_Games_Launcher|head -1)
+[ -z "$autoload_" ] && echo "$_bash_aliases" >> ~/.bashrc
+[ -z "$aliascheck_" ] && echo "alias Heroic_Games_Launcher='flatpak run com.heroicgameslauncher.hgl'" >> ~/.bash_aliases 
 echo "DONE."
 }
 _init
