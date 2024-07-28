@@ -36,6 +36,7 @@ echo "Terminal=false">>$_sc
 echo "StartupNotify=false">>$_sc
 echo "CREATING ALIAS FOR Arduino_IDE_v2"
 [ ! -f ~/.bashrc ] && touch ~/.bashrc
+[ ! -f ~/.bash_aliases ] && touch ~/.bash_aliases
 _bash_aliases="[ -f ~/.bash_aliases ] && . ~/.bash_aliases"
 autoload_=$(cat ~/.bashrc|grep "$_bash_aliases")
 aliascheck_=$(cat ~/.bash_aliases|grep -o -m 1 Arduino_IDE_v2|head -1)
